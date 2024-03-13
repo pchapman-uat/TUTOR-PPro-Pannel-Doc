@@ -11,6 +11,12 @@ document.addEventListener('DOMContentLoaded', function(){
         var option = document.getElementById("selection").value
         // This gets the body element and saves it to the body variable
         var body = document.getElementById("body");
+
+        // Get ID of container
+        var text = document.getElementById("container")
+        // Reset the information in the container
+        text.innerHTML = ""
+
         // Initalizing the information variable
         var information
         // This checks the value of the selection element
@@ -20,24 +26,97 @@ document.addEventListener('DOMContentLoaded', function(){
         // It will also display infomration about the color
         if(option === "red"){
             body.style.backgroundColor = "red";
-            information = "Red tends to show bravery"
+
+            // Create a new paragraph element and set its inner html
+            var paragraph1 = document.createElement("p")
+            paragraph1.innerHTML = "Red tends to show aggression"
+            // Add the paragraph1 element to the text element
+            text.appendChild(paragraph1)
+            // Repeat for paragrapfs 2-3
+            var paragraph2 = document.createElement("p")
+            paragraph2.innerHTML = "More information about red... Blah blah blah "
+            text.appendChild(paragraph2)
+            var paragraph3 = document.createElement("p")
+            paragraph3.innerHTML = "Text here"
+            text.appendChild(paragraph3)
+
+
+
+            // Create link element
+            var link = document.createElement("a")
+            // Set its location (href) to the url
+            link.setAttribute("href", "https://www.color-hex.com/color/ff0000")
+            // Open link in new tab
+            link.setAttribute("target", "_blank")
+            // Set the display information
+            link.innerHTML = "More information"
+            // Append the link to the second paragraph
+            paragraph2.appendChild(link)
+            
         } else if (option === "blue"){
             body.style.backgroundColor = "blue";
-            information = "Blue tends to show intelligence"
+
+            // Create a new paragraph element and set its inner html
+            var paragraph1 = document.createElement("p")
+            paragraph1.innerHTML = "Blue tends to show sadness"
+            // Add the paragraph1 element to the text element
+            text.appendChild(paragraph1)
+            // Repeat for paragrapfs 2-3
+            var paragraph2 = document.createElement("p")
+            paragraph2.innerHTML = "More information about blue... Blah blah blah "
+            text.appendChild(paragraph2)
+            var paragraph3 = document.createElement("p")
+            paragraph3.innerHTML = "Text here"
+            text.appendChild(paragraph3)
+
+
+
+            // Create link element
+            var link = document.createElement("a")
+            // Set its location (href) to the url
+            link.setAttribute("href", "https://www.color-hex.com/color/0000ff")
+            // Open link in new tab
+            link.setAttribute("target", "_blank")
+            // Set the display information
+            link.innerHTML = "More information"
+            // Append the link to the second paragraph
+            paragraph2.appendChild(link)
         } else if (option === "green"){
             body.style.backgroundColor = "green";
-            information = "Green tends to show kindness"
-        // This is an else, meaning if everything is false it runs
+
+            // Create a new paragraph element and set its inner html
+            var paragraph1 = document.createElement("p")
+            paragraph1.innerHTML =  "Green tends to show happiness"
+            // Add the paragraph1 element to the text element
+            text.appendChild(paragraph1)
+            // Repeat for paragrapfs 2-3
+            var paragraph2 = document.createElement("p")
+            paragraph2.innerHTML = "More information about green... Blah blah blah "
+            text.appendChild(paragraph2)
+            var paragraph3 = document.createElement("p")
+            paragraph3.innerHTML = "Text here"
+            text.appendChild(paragraph3)
+
+
+
+            // Create link element
+            var link = document.createElement("a")
+            // Set its location (href) to the url
+            link.setAttribute("href", "https://www.color-hex.com/color/00ff00")
+            // Open link in new tab
+            link.setAttribute("target", "_blank")
+            // Set the display information
+            link.innerHTML = "More information"
+            // Append the link to the second paragraph
+            paragraph2.appendChild(link)
         } else {
             console.log("Not valid color selected")
             console.log(option)
             body.style.backgroundColor = "black";
-            information = "Please select a color"
         }
         // This gets the element with the id of text and saves it to the text variable
-        var text = document.getElementById("text")
+        
         // This changes the innerHTML of the text element to the information variable
-        text.innerHTML = information
     });
 
     // This gets the element with the id of slider and saves it to the slider variable
